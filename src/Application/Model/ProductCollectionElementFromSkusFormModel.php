@@ -9,23 +9,24 @@ declare(strict_types = 1);
 
 namespace Ergonode\ProductCollection\Application\Model;
 
-use Ergonode\Product\Infrastructure\Validator\SkusValid;
+use Symfony\Component\Validator\Constraints as Assert;
+use Ergonode\Product\Infrastructure\Validator\Sku;
+use Ergonode\Product\Infrastructure\Validator\ProductSkuExists;
 
 /**
  */
 class ProductCollectionElementFromSkusFormModel
 {
     /**
-     * @var string|null
+     * @var string[]
      *
-     * @SkusValid()
+     * @Assert\All({
+     *     @Assert\NotBlank(),
+     *
+     *     @Sku(),
+     *
+     *     @ProductSkuExists()
+     * })
      */
-    public ?string $skus;
-
-    /**
-     */
-    public function __construct()
-    {
-        $this->skus = null;
-    }
+    public array $skus = [];
 }
