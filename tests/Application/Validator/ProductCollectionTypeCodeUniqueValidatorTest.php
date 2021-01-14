@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace Ergonode\ProductCollection\Tests\Infrastructure\Validator;
+namespace Ergonode\ProductCollection\Tests\Application\Validator;
 
 use Ergonode\ProductCollection\Domain\Query\ProductCollectionTypeQueryInterface;
-use Ergonode\ProductCollection\Infrastructure\Validator\Constraints\ProductCollectionTypeCodeUnique;
-use Ergonode\ProductCollection\Infrastructure\Validator\ProductCollectionTypeCodeUniqueValidator;
+use Ergonode\ProductCollection\Application\Validator\ProductCollectionTypeCodeUnique;
+use Ergonode\ProductCollection\Application\Validator\ProductCollectionTypeCodeUniqueValidator;
 use Ergonode\SharedKernel\Domain\Aggregate\ProductCollectionTypeId;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Validator\Constraint;

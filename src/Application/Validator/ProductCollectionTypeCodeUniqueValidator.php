@@ -7,11 +7,10 @@
 
 declare(strict_types=1);
 
-namespace Ergonode\ProductCollection\Infrastructure\Validator;
+namespace Ergonode\ProductCollection\Application\Validator;
 
 use Ergonode\ProductCollection\Domain\Query\ProductCollectionTypeQueryInterface;
 use Ergonode\ProductCollection\Domain\ValueObject\ProductCollectionTypeCode;
-use Ergonode\ProductCollection\Infrastructure\Validator\Constraints\ProductCollectionTypeCodeUnique;
 use Symfony\Component\Form\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;

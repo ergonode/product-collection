@@ -7,9 +7,8 @@
 
 declare(strict_types=1);
 
-namespace Ergonode\ProductCollection\Infrastructure\Validator\Constraints;
+namespace Ergonode\ProductCollection\Application\Validator;
 
-use Ergonode\ProductCollection\Infrastructure\Validator\ProductCollectionTypeCodeUniqueValidator;
 use Symfony\Component\Validator\Constraint;
 
 /**
@@ -18,9 +17,4 @@ use Symfony\Component\Validator\Constraint;
 class ProductCollectionTypeCodeUnique extends Constraint
 {
     public string $message = 'The product collection type code {{ value }} is not unique.';
-
-    public function validatedBy(): string
-    {
-        return ProductCollectionTypeCodeUniqueValidator::class;
-    }
 }

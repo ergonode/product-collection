@@ -7,13 +7,12 @@
 
 declare(strict_types=1);
 
-namespace Ergonode\ProductCollection\Infrastructure\Validator;
+namespace Ergonode\ProductCollection\Application\Validator;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Ergonode\ProductCollection\Domain\Repository\ProductCollectionTypeRepositoryInterface;
 use Ergonode\SharedKernel\Domain\Aggregate\ProductCollectionTypeId;
-use Ergonode\ProductCollection\Infrastructure\Validator\Constraints\ProductCollectionTypeExists;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 
 class ProductCollectionTypeExistsValidator extends ConstraintValidator
