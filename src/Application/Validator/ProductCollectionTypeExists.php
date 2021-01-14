@@ -7,10 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ergonode\ProductCollection\Infrastructure\Validator\Constraints;
+namespace Ergonode\ProductCollection\Application\Validator;
 
 use Symfony\Component\Validator\Constraint;
-use Ergonode\ProductCollection\Infrastructure\Validator\ProductCollectionTypeExistsValidator;
 
 /**
  * @Annotation
@@ -18,9 +17,4 @@ use Ergonode\ProductCollection\Infrastructure\Validator\ProductCollectionTypeExi
 class ProductCollectionTypeExists extends Constraint
 {
     public string $message = 'Product collection type not exists.';
-
-    public function validatedBy(): string
-    {
-        return ProductCollectionTypeExistsValidator::class;
-    }
 }
